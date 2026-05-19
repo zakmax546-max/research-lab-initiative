@@ -10,176 +10,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* العقود الأساسية */
-        :root {
-            --primary-color: #003366;
-            --secondary-color: #11caa0;
-            --dark-color: #0a192f;
-            --light-color: #f4f6f9;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: var(--light-color);
-            color: #333;
-            line-height: 1.8;
-            padding-bottom: 120px;
-        }
-
-        /* الهيدر أو الترويسة */
-        header {
-            background: linear-gradient(135deg, #002244 0%, #004488 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--secondary-color);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .logo-container {
-            margin-bottom: 15px;
-        }
-
-        .logo-img {
-            max-width: 180px;
-            height: auto;
-            border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            background-color: white;
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1rem;
-            color: #e0e0e0;
-            margin: 0 auto;
-        }
-
-        /* الحاوية الرئيسية */
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        /* الكروت والبطاقات */
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-right: 5px solid var(--primary-color);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-2px);
-        }
-
-        .card-title {
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
-        }
-
-        .card-title i {
-            color: var(--secondary-color);
-        }
-
-        /* القوائم والتنسيقات */
-        ul {
-            list-style: none;
-            padding-right: 10px;
-        }
-
-        li {
-            position: relative;
-            padding-right: 25px;
-            margin-bottom: 12px;
-        }
-
-        li::before {
-            content: "\f00c";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            position: absolute;
-            right: 0;
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-        }
-
-        /* تنسيق أسماء الأعضاء */
-        .member-badge {
-            display: inline-block;
-            background-color: #e6f0fa;
-            color: var(--primary-color);
-            padding: 5px 15px;
-            border-radius: 20px;
-            margin: 5px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border: 1px solid #cbdcf0;
-        }
-
-        .member-badge i {
-            margin-left: 5px;
-            color: var(--secondary-color);
-        }
-
-        /* الفوتر أو التذييل */
-        footer {
-            background-color: #001122;
-            color: #ccc;
-            text-align: center;
-            padding: 25px 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 0.9rem;
-            border-top: 2px solid var(--secondary-color);
-            z-index: 1000;
-        }
-
-        footer p {
-            margin-bottom: 5px;
-        }
-
-        footer .credits {
-            color: var(--secondary-color);
-            font-weight: 600;
-        }
+        :root { --primary-color: #003366; --secondary-color: #11caa0; --light-color: #f4f6f9; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Cairo', sans-serif; background-color: var(--light-color); color: #333; line-height: 1.8; padding-bottom: 120px; }
+        header { background: linear-gradient(135deg, #002244 0%, #004488 100%); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--secondary-color); }
+        .logo-img { max-width: 180px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        .card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-right: 5px solid var(--primary-color); }
+        .card-title { color: var(--primary-color); font-size: 1.3rem; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        .member-badge { display: inline-block; background-color: #e6f0fa; color: var(--primary-color); padding: 5px 15px; border-radius: 20px; margin: 5px; font-weight: 600; font-size: 0.95rem; }
+        .news-item { border-bottom: 1px solid #eee; padding: 15px 0; }
+        footer { background-color: #001122; color: #ccc; text-align: center; padding: 20px; position: fixed; bottom: 0; width: 100%; font-size: 0.9rem; border-top: 2px solid var(--secondary-color); }
+        .credits { color: var(--secondary-color); font-weight: 600; margin-top: 5px; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="IMG-20260519-WA0028.jpg" alt="شعار المبادرة" class="logo-img">
-        </div>
+        <img src="IMG-20260519-WA0028.jpg" alt="الشعار" class="logo-img">
         <h1>مبادرة تأهيل مختبر الأبحاث</h1>
         <p>كلية العلوم التطبيقية | جامعة البحر الأحمر</p>
     </header>
 
     <div class="container">
-
         <div class="card">
             <h2 class="card-title"><i class="fas fa-bullseye"></i> رؤية المبادرة وهدفها الرئيسي</h2>
             <p>تهدف هذه المبادرة إلى ترقية وتأهيل معمل الأبحاث بقسم المختبرات الكيميائية بكلية العلوم التطبيقية ليتوافق مع المعايير العلمية الحديثة، وتوفير بيئة بحثية متكاملة تخدم الطلاب والباحثين للمساهمة في جودة المخرجات الأكاديمية.</p>
@@ -189,29 +42,29 @@
             <h2 class="card-title"><i class="fas fa-vials"></i> أبرز مقترحات ومتطلبات التأهيل</h2>
             <ul>
                 <li>تحديث الأجهزة التحليلية الأساسية ودعم البنية التحتية للمختبر.</li>
-                <li>توفير منظومة تهوية متكاملة (Fume Hoods) لضمان أمن وسلامة الباحثين أثناء التجارب.</li>
-                <li>تأمين خطوط إمداد الغازات والمياه المقطرة والمواد الكيميائية عالية النقاء (Analytical Grade).</li>
-                <li>تطوير نظام التخلص الآمن من المخلفات الكيميائية لحماية البيئة الجامعية.</li>
+                <li>توفير منظومة تهوية متكاملة (Fume Hoods) لضمان أمن وسلامة الباحثين.</li>
+                <li>تأمين خطوط إمداد الغازات والمياه المقطرة والمواد الكيميائية عالية النقاء.</li>
+                <li>تطوير نظام التخلص الآمن من المخلفات الكيميائية.</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2 class="card-title"><i class="fas fa-camera-retro"></i> دور التوثيق والمكتب الإعلامي</h2>
-            <p>يقوم المكتب الإعلامي للمبادرة برصد وتوثيق كافة مراحل التحديث، وإعداد التقارير الدورية لعرض الإنجازات، وتسهيل عملية التواصل بين إدارة الكلية والجهات الداعمة للمشروع لضمان الشفافية والاستمرارية.</p>
+            <h2 class="card-title"><i class="fas fa-newspaper"></i> أخبار ومستجدات المبادرة</h2>
+            <div class="news-item">
+                <h4 style="color: var(--primary-color);">بداية العمل الميداني</h4>
+                <p>تم بحمد الله البدء في حصر احتياجات المختبر وتوثيق حالته الراهنة.</p>
+                <small style="color: #888;">19 مايو 2026</small>
+            </div>
         </div>
 
         <div class="card">
             <h2 class="card-title"><i class="fas fa-users"></i> أعضاء المكتب الإعلامي للمبادرة</h2>
-            <p style="margin-bottom: 15px;">الفريق القائم على التغطية والتوثيق الإعلامي للمبادرة:</p>
-            
-            <span class="member-badge"><i class="fas fa-user"></i> سعيد عبدالله سعيد</span>
-            <span class="member-badge"><i class="fas fa-user"></i> عبد القادر عبد المنعم</span>
-            <span class="member-badge"><i class="fas fa-user"></i> محمد ابوبكر</span>
-            <span class="member-badge"><i class="fas fa-user"></i> سبأ صلاح مكي</span>
-            <span class="member-badge"><i class="fas fa-user"></i> منيه موسى محمد</span>
-            
+            <span class="member-badge">سعيد عبدالله سعيد</span>
+            <span class="member-badge">عبد القادر عبد المنعم</span>
+            <span class="member-badge">محمد ابوبكر</span>
+            <span class="member-badge">سبأ صلاح مكي</span>
+            <span class="member-badge">منيه موسى محمد</span>
         </div>
-
     </div>
 
     <footer>
@@ -221,7 +74,3 @@
 
 </body>
 </html>
-
-
-
-
