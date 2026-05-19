@@ -29,7 +29,7 @@
             background-color: var(--light-color);
             color: #333;
             line-height: 1.8;
-            padding-bottom: 80px;
+            padding-bottom: 120px; /* زيادة المساحة للفوتر الجديد */
         }
 
         /* الهيدر أو الترويسة */
@@ -147,15 +147,24 @@
         /* الفوتر أو التذييل */
         footer {
             background-color: #001122;
-            color: #aaa;
+            color: #ccc;
             text-align: center;
-            padding: 20px;
+            padding: 25px 20px;
             position: fixed;
             bottom: 0;
             width: 100%;
-            font-size: 0.85rem;
-            border-top: 1px solid #223344;
+            font-size: 0.9rem;
+            border-top: 2px solid var(--secondary-color);
             z-index: 1000;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        footer .credits {
+            color: var(--secondary-color);
+            font-weight: 600;
         }
     </style>
 </head>
@@ -192,11 +201,14 @@
         </div>
 
         <div class="card">
-            <h2 class="card-title"><i class="fas fa-users"></i> أعضاء المبادرة والمكتب الإعلامي</h2>
-            <p style="margin-bottom: 15px;">نخبة من طلاب وباحثي كلية العلوم التطبيقية القائمين على العمل:</p>
+            <h2 class="card-title"><i class="fas fa-users"></i> أعضاء المكتب الإعلامي للمبادرة</h2>
+            <p style="margin-bottom: 15px;">الفريق القائم على التغطية والتوثيق الإعلامي للمبادرة:</p>
             
-            <span class="member-badge"><i class="fas fa-user"></i> عبد القادر عبد المنعم الصافي</span>
+            <span class="member-badge"><i class="fas fa-user"></i> سعيد عبدالله سعيد</span>
+            <span class="member-badge"><i class="fas fa-user"></i> عبد القادر عبد المنعم</span>
+            <span class="member-badge"><i class="fas fa-user"></i> محمد ابوبكر</span>
             <span class="member-badge"><i class="fas fa-user"></i> سبأ صلاح مكي</span>
+            <span class="member-badge"><i class="fas fa-user"></i> منيه موسى محمد</span>
             
         </div>
 
@@ -204,9 +216,11 @@
 
     <footer>
         <p>جميع الحقوق محفوظة © مبادرة مختبر الأبحاث - جامعة البحر الأحمر 2026</p>
+        <p class="credits">تم تصميم هذا الموقع من قبل المخترع عبد القادر عبد المنعم ال ساتي</p>
     </footer>
 
 </body>
 </html>
+
 
 
