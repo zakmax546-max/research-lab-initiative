@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        :root { --primary-color: #003366; --secondary-color: #11caa0; --light-color: #f4f6f9; }
+        :root { --primary-color: #003366; --secondary-color: #11caa0; --accent-color: #ff9900; --light-color: #f4f6f9; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Cairo', sans-serif; background-color: var(--light-color); color: #333; line-height: 1.8; padding-bottom: 150px; }
         header { background: linear-gradient(135deg, #002244 0%, #004488 100%); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--secondary-color); }
@@ -19,15 +19,12 @@
         .card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-right: 5px solid var(--primary-color); }
         .card-title { color: var(--primary-color); font-size: 1.3rem; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
         .member-badge { display: inline-block; background-color: #e6f0fa; color: var(--primary-color); padding: 5px 15px; border-radius: 20px; margin: 5px; font-weight: 600; font-size: 0.9rem; }
+        .news-item { border-bottom: 1px solid #eee; padding: 10px 0; font-size: 0.95rem; }
+        .announcement { border-right: 5px solid var(--accent-color) !important; }
         
-        /* أزرار التواصل */
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
-        .btn-contact { text-decoration: none; padding: 10px; border-radius: 8px; text-align: center; color: white; font-weight: bold; transition: opacity 0.3s; }
-        .whatsapp { background-color: #25d366; }
-        .telegram { background-color: #0088cc; }
-        .youtube { background-color: #ff0000; }
-        .email { background-color: #d44638; }
-
+        .btn-contact { text-decoration: none; padding: 10px; border-radius: 8px; text-align: center; color: white; font-weight: bold; }
+        .whatsapp { background-color: #25d366; } .telegram { background-color: #0088cc; } .youtube { background-color: #ff0000; } .email { background-color: #d44638; }
         footer { background-color: #001122; color: #ccc; text-align: center; padding: 20px; position: fixed; bottom: 0; width: 100%; font-size: 0.8rem; }
     </style>
 </head>
@@ -39,9 +36,18 @@
     </header>
 
     <div class="container">
-        <div class="card">
-            <h2 class="card-title"><i class="fas fa-bullseye"></i> رؤية المبادرة</h2>
-            <p>ترقية وتأهيل معمل الأبحاث بقسم المختبرات الكيميائية ليتوافق مع المعايير العلمية الحديثة.</p>
+        
+        <div class="card announcement">
+            <h2 class="card-title" style="color: var(--accent-color);"><i class="fas fa-bullhorn"></i> إعلان تشكيل المكتب التنفيذي</h2>
+            <p>تم بحمد الله اختيار رؤساء لجان المكتب التنفيذي للمبادرة:</p>
+            <div class="news-item"><b>رئيس المبادرة:</b> أسامة مصطفى (معامل كيميائية)</div>
+            <div class="news-item"><b>نائب الرئيس:</b> عبدالله (كيمياء تطبيقية)</div>
+            <div class="news-item"><b>المقرر العام:</b> رحيق عبد الباسط (مختبرات كيميائية)</div>
+            <div class="news-item"><b>اللجنة الإعلامية:</b> سعيد (مختبرات كيميائية)</div>
+            <div class="news-item"><b>اللجنة المالية:</b> هبة أحمد (بيئة وموارد)</div>
+            <div class="news-item"><b>العلاقات الخارجية:</b> ريم زهير (معامل كيميائية)</div>
+            <div class="news-item"><b>اللجنة الفنية:</b> أبوبكر (فيزياء إلكترونية)</div>
+            <p style="margin-top: 15px; color: var(--primary-color); font-weight: bold;">🗓️ أول اجتماع: الثلاثاء 19 مايو 2026، الساعة 2 ظهراً.</p>
         </div>
 
         <div class="card">
