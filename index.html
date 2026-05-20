@@ -3,103 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مبادرة تأهيل مختبر الأبحاث | جامعة البحر الأحمر</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>مبادرة تأهيل معمل الأبحاث | جامعة البحر الأحمر</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        :root { 
-            --primary: #002244; 
-            --secondary: #11caa0; 
-            --accent: #ff9900; 
-            --bg: #f8fafc; 
+        /* المتغيرات والألوان الأساسية */
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #11caa0;
+            --dark-color: #0f172a;
+            --light-color: #f8fafc;
+            --text-muted: #64748b;
         }
+
+        /* التنسيق العام */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Cairo', sans-serif; background-color: var(--bg); color: #334155; line-height: 1.8; padding-bottom: 100px; }
-        
-        header { 
-            background: linear-gradient(135deg, var(--primary) 0%, #004488 100%); 
-            color: white; padding: 50px 20px; text-align: center; 
-            border-bottom: 8px solid var(--secondary); 
+        body { font-family: 'Cairo', sans-serif; background-color: #ffffff; color: var(--dark-color); line-height: 1.6; }
+
+        /* الهيدر والقائمة */
+        header { background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .navbar { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Tajawal', sans-serif; font-size: 22px; font-weight: 900; color: var(--primary-color); display: flex; align-items: center; gap: 10px; }
+        .logo i { color: var(--secondary-color); }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--dark-color); font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--secondary-color); }
+
+        /* القسم الرئيسي (Hero) */
+        .hero { background: linear-gradient(135deg, rgba(0, 51, 102, 0.95) 0%, rgba(0, 26, 51, 0.98) 100%); color: white; padding: 100px 20px; text-align: center; position: relative; }
+        .hero h1 { font-family: 'Tajawal', sans-serif; font-size: 42px; font-weight: 900; margin-bottom: 20px; }
+        .hero p { font-size: 20px; color: #cbd5e1; max-width: 800px; margin: 0 auto 30px auto; }
+        .badge { background-color: var(--secondary-color); color: var(--primary-color); padding: 6px 16px; border-radius: 20px; font-weight: 700; display: inline-block; margin-bottom: 15px; }
+
+        /* الأقسام العامة */
+        section { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
+        .section-title { text-align: center; font-family: 'Tajawal', sans-serif; font-size: 32px; margin-bottom: 50px; color: var(--primary-color); position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background-color: var(--secondary-color); margin: 10px auto 0 auto; border-radius: 2px; }
+
+        /* كروت الأهداف */
+        .goals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .goal-card { background-color: var(--light-color); padding: 35px 25px; border-radius: 12px; text-align: center; border-top: 5px solid var(--primary-color); transition: transform 0.3s; }
+        .goal-card:hover { transform: translateY(-5px); }
+        .goal-card i { font-size: 45px; color: var(--secondary-color); margin-bottom: 20px; }
+        .goal-card h3 { margin-bottom: 15px; color: var(--primary-color); }
+
+        /* خط السير */
+        .timeline { position: relative; max-width: 900px; margin: 0 auto; }
+        .timeline::after { content: ''; position: absolute; width: 4px; background-color: var(--primary-color); top: 0; bottom: 0; left: 50%; margin-left: -2px; }
+        .timeline-container { padding: 10px 40px; position: relative; width: 50%; }
+        .timeline-container::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: #ffffff; border: 4px solid var(--secondary-color); top: 15px; border-radius: 50%; z-index: 1; }
+        .left { left: 50%; }
+        .right { left: 0; }
+        .right::after { left: -10px; right: auto; }
+        .timeline-content { padding: 20px 30px; background-color: var(--light-color); border-radius: 8px; }
+
+        /* كروت الفريق */
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .member-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); }
+        .member-card.leader { border: 2px solid var(--secondary-color); background: linear-gradient(to bottom, #ffffff, #f0fdfa); }
+        .member-avatar { width: 80px; height: 80px; background-color: #e2e8f0; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center; font-size: 30px; color: var(--primary-color); }
+        .member-card.leader .member-avatar { background-color: var(--secondary-color); color: white; }
+
+        /* قسم التواصل الجديد */
+        .contact-box { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
+        .contact-btn { padding: 12px 25px; border-radius: 50px; color: white; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        .contact-btn:hover { transform: scale(1.05); }
+
+        /* الفوتر */
+        footer { background-color: var(--primary-color); color: white; text-align: center; padding: 40px 20px; margin-top: 100px; }
+        footer p { color: #94a3b8; font-size: 15px; }
+
+        @media screen and (max-width: 768px) {
+            .navbar { flex-direction: column; gap: 15px; }
+            .hero h1 { font-size: 30px; }
+            .timeline::after { left: 31px; }
+            .timeline-container { width: 100%; padding-left: 70px; padding-right: 25px; }
         }
-        .logo-img { max-width: 150px; border-radius: 50%; border: 5px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.3); margin-bottom: 20px; }
-        .uni-name { font-size: 1.5rem; font-weight: 900; }
-        .college-name { font-size: 1.2rem; color: var(--secondary); font-weight: 600; margin-bottom: 10px; }
-        
-        .container { max-width: 850px; margin: 40px auto; padding: 0 20px; }
-        .card { 
-            background: white; border-radius: 16px; padding: 30px; margin-bottom: 30px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-right: 6px solid var(--primary); 
-        }
-        .card-title { color: var(--primary); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-        
-        .member-badge { display: inline-block; background-color: #f1f5f9; color: var(--primary); padding: 8px 20px; border-radius: 50px; margin: 6px; font-weight: 700; font-size: 0.95rem; transition: 0.3s; }
-        .member-badge:hover { background: var(--secondary); color: white; }
-        
-        .news-item { padding: 12px 0; border-bottom: 1px dashed #e2e8f0; font-size: 1rem; }
-        .announcement { border-right: 6px solid var(--accent) !important; background: #fffdf5; }
-        
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; margin-top: 20px; }
-        .btn-contact { text-decoration: none; padding: 14px; border-radius: 12px; text-align: center; color: white; font-weight: bold; transition: 0.4s; }
-        .btn-contact:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .whatsapp { background-color: #25d366; } .telegram { background-color: #0088cc; } .youtube { background-color: #ff0000; } .email { background-color: #d44638; }
-        
-        footer { background-color: var(--primary); color: #cbd5e1; text-align: center; padding: 30px; margin-top: 50px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="IMG-20260519-WA0028.jpg" alt="الشعار" class="logo-img">
-        <div class="uni-name">جامعة البحر الأحمر</div>
-        <div class="college-name">كلية العلوم التطبيقية</div>
-        <h1 style="font-size: 1.8rem;">مبادرة تأهيل مختبر الأبحاث</h1>
+        <nav class="navbar">
+            <div class="logo"><i class="fa-solid fa-flask-vial"></i> <span>جامعة البحر الأحمر</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">عن المبادرة</a></li>
+                <li><a href="#goals">الأهداف</a></li>
+                <li><a href="#timeline">خطة العمل</a></li>
+                <li><a href="#media-team">المكتب الإعلامي</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        
-        <div class="card">
-            <h2 class="card-title"><i class="fas fa-bullseye"></i> أهداف المبادرة</h2>
-            <div class="news-item"><i class="fas fa-check-circle" style="color:var(--secondary)"></i> توفير بيئة بحثية ملائمة للطلاب والباحثين.</div>
-            <div class="news-item"><i class="fas fa-check-circle" style="color:var(--secondary)"></i> صيانة وتطوير الأجهزة والمعدات المخبرية.</div>
-            <div class="news-item"><i class="fas fa-check-circle" style="color:var(--secondary)"></i> تعزيز التعاون بين الأقسام العلمية المختلفة.</div>
-            <div class="news-item"><i class="fas fa-check-circle" style="color:var(--secondary)"></i> رفع كفاءة الأداء العملي في الكلية.</div>
-        </div>
+    <section class="hero">
+        <span class="badge">عام 2026م</span>
+        <h1>مبادرة تأهيل معمل الأبحاث</h1>
+        <p>تحت شعار "معاً لرفع كفاءة البحث العلمي" - خطوة استراتيجية نحو التميز الأكاديمي والاعتماد الدولي بكلية العلوم التطبيقية.</p>
+    </section>
 
-        <div class="card announcement">
-            <h2 class="card-title" style="color: var(--accent);"><i class="fas fa-bullhorn"></i> المكتب التنفيذي</h2>
-            <div class="news-item"><b>رئيس المبادرة:</b> أسامة مصطفى (معامل كيميائية)</div>
-            <div class="news-item"><b>نائب الرئيس:</b> عبدالله (كيمياء تطبيقية)</div>
-            <div class="news-item"><b>المقرر العام:</b> رحيق عبد الباسط (مختبرات كيميائية)</div>
-            <div class="news-item"><b>اللجنة الإعلامية:</b> سعيد (مختبرات كيميائية)</div>
-            <div class="news-item"><b>اللجنة المالية:</b> هبة أحمد (بيئة وموارد)</div>
-            <div class="news-item"><b>العلاقات الخارجية:</b> ريم زهير (معامل كيميائية)</div>
-            <div class="news-item"><b>اللجنة الفنية:</b> أبوبكر (فيزياء إلكترونية)</div>
-            <p style="margin-top: 15px; color: var(--primary); font-weight: bold;">🗓️ أول اجتماع: الثلاثاء 19 مايو 2026، الساعة 2 ظهراً.</p>
+    <section id="goals">
+        <h2 class="section-title">محاور التطوير الأساسية</h2>
+        <div class="goals-grid">
+            <div class="goal-card"><i class="fa-solid fa-microscope"></i><h3>تحديث تقني شامل</h3><p>تزويد المعمل بأحدث الأجهزة والتقنيات الرقمية لضمان دقة التحاليل وسرعتها.</p></div>
+            <div class="goal-card"><i class="fa-solid fa-award"></i><h3>الجودة والاعتماد</h3><p>تطبيق معايير ISO العالمية للارتقاء بمرتبة الأبحاث الصادرة من الجامعة دولياً.</p></div>
+            <div class="goal-card"><i class="fa-solid fa-brain"></i><h3>أنظمة ذكية</h3><p>دمج حلول تكنولوجيا المعلومات والذكاء الاصطناعي في معالجة ونمذجة البيانات البحثية.</p></div>
         </div>
+    </section>
 
-        <div class="card">
-            <h2 class="card-title"><i class="fas fa-users"></i> أعضاء المكتب الإعلامي</h2>
-            <span class="member-badge">سعيد عبدالله سعيد</span>
-            <span class="member-badge">عبد القادر عبد المنعم</span>
-            <span class="member-badge">محمد ابوبكر</span>
-            <span class="member-badge">سبأ صلاح مكي</span>
-            <span class="member-badge">منيه موسى محمد</span>
+    <section id="timeline">
+        <h2 class="section-title">أين نحن الآن؟ (خطة العمل)</h2>
+        <div class="timeline">
+            <div class="timeline-container right"><div class="timeline-content"><h3 style="color:var(--primary-color)">الربع الأول: التقييم والتأسيس</h3><p>حصر الاحتياجات المعملية، مراجعة النواقص، ووضع مواصفات الأجهزة المطلوبة.</p></div></div>
+            <div class="timeline-container left"><div class="timeline-content"><h3 style="color:var(--primary-color)">الربع الثاني: الإحلال والتركيب</h3><p>تحديث البنية التحتية للمختبرات، واستقبال وتركيب الأجهزة الذكية الجديدة.</p></div></div>
+            <div class="timeline-container right"><div class="timeline-content"><h3 style="color:var(--primary-color)">الربع الثالث: التدريب والتأهيل</h3><p>برامج تدريبية مكثفة للكوادر والباحثين على الأجهزة وبروتوكولات الجودة والأيزو.</p></div></div>
+            <div class="timeline-container left"><div class="timeline-content"><h3 style="color:var(--primary-color)">الربع الرابع: التشغيل الكامل</h3><p>الافتتاح الرسمي وضخ المشاريع البحثية والتطبيقية لخدمة المجتمع الأكاديمي والصناعي.</p></div></div>
         </div>
+    </section>
 
-        <div class="card">
-            <h2 class="card-title"><i class="fas fa-headset"></i> تواصل معنا</h2>
-            <div class="contact-grid">
-                <a href="https://wa.me/249906131492" class="btn-contact whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
-                <a href="https://t.me/abdulqader76" class="btn-contact telegram"><i class="fab fa-telegram"></i> تلجرام</a>
-                <a href="https://youtube.com/@maxmxa-j5e" class="btn-contact youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
-                <a href="mailto:12faslri.12@gmail.com" class="btn-contact email"><i class="fas fa-envelope"></i> البريد</a>
-            </div>
+    <section id="media-team">
+        <h2 class="section-title">المكتب الإعلامي للمبادرة</h2>
+        <div class="team-grid">
+            <div class="member-card leader"><div class="member-avatar"><i class="fa-solid fa-user-tie"></i></div><h3>سعيد عبدالله سعيد</h3></div>
+            <div class="member-card"><div class="member-avatar"><i class="fa-solid fa-user"></i></div><h3>عبد القادر عبد المنعم</h3></div>
+            <div class="member-card"><div class="member-avatar"><i class="fa-solid fa-user"></i></div><h3>محمد ابوبكر</h3></div>
+            <div class="member-card"><div class="member-avatar"><i class="fa-solid fa-user"></i></div><h3>سبأ صلاح مكي</h3></div>
+            <div class="member-card"><div class="member-avatar"><i class="fa-solid fa-user"></i></div><h3>منيه موسى محمد</h3></div>
         </div>
-    </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">تواصل معنا</h2>
+        <div class="contact-box">
+            <a href="https://wa.me/249906131492" class="contact-btn" style="background-color: #25d366;"><i class="fab fa-whatsapp"></i> واتساب</a>
+            <a href="https://t.me/abdulqader76" class="contact-btn" style="background-color: #0088cc;"><i class="fab fa-telegram"></i> تلجرام</a>
+            <a href="https://youtube.com/@maxmxa-j5e" class="contact-btn" style="background-color: #ff0000;"><i class="fab fa-youtube"></i> يوتيوب</a>
+            <a href="mailto:12faslri.12@gmail.com" class="contact-btn" style="background-color: #ea4335;"><i class="fas fa-envelope"></i> البريد الإلكتروني</a>
+        </div>
+    </section>
 
     <footer>
-        <p>جميع الحقوق محفوظة © كلية العلوم التطبيقية - جامعة البحر الأحمر 2026</p>
+        <h3 style="color: white; margin-bottom: 10px;">كلية العلوم التطبيقية</h3>
+        <p>جامعة البحر الأحمر - بورتسودان</p>
+        <p style="margin-top: 20px; font-size: 13px;">&copy; 2026 جميع الحقوق محفوظة للمكتب الإعلامي</p>
     </footer>
 
 </body>
