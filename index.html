@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جامعة البحر الأحمر | مقترحات تأهيل معمل الأبحاث</title>
+    <title>مبادرة تأهيل مختبر الأبحاث | جامعة البحر الأحمر</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -13,8 +13,14 @@
         :root { --primary-color: #003366; --secondary-color: #11caa0; --accent-color: #ff9900; --light-color: #f4f6f9; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Cairo', sans-serif; background-color: var(--light-color); color: #333; line-height: 1.8; padding-bottom: 150px; }
-        header { background: linear-gradient(135deg, #002244 0%, #004488 100%); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--secondary-color); }
-        .logo-img { max-width: 150px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        
+        header { background: linear-gradient(135deg, #002244 0%, #004488 100%); color: white; padding: 30px 20px; text-align: center; border-bottom: 5px solid var(--secondary-color); }
+        .logo-img { max-width: 140px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 15px; }
+        .uni-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 5px; }
+        .uni-name-en { font-size: 0.9rem; opacity: 0.8; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        .college-name { font-size: 1.1rem; color: var(--secondary-color); font-weight: 600; margin-bottom: 5px; }
+        .college-name-en { font-size: 0.85rem; opacity: 0.7; margin-bottom: 20px; text-transform: uppercase; }
+        
         .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
         .card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-right: 5px solid var(--primary-color); }
         .card-title { color: var(--primary-color); font-size: 1.3rem; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
@@ -25,6 +31,7 @@
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
         .btn-contact { text-decoration: none; padding: 10px; border-radius: 8px; text-align: center; color: white; font-weight: bold; }
         .whatsapp { background-color: #25d366; } .telegram { background-color: #0088cc; } .youtube { background-color: #ff0000; } .email { background-color: #d44638; }
+        
         footer { background-color: #001122; color: #ccc; text-align: center; padding: 20px; position: fixed; bottom: 0; width: 100%; font-size: 0.8rem; }
     </style>
 </head>
@@ -32,11 +39,14 @@
 
     <header>
         <img src="IMG-20260519-WA0028.jpg" alt="الشعار" class="logo-img">
-        <h1>مبادرة تأهيل مختبر الأبحاث</h1>
+        <div class="uni-name">جامعة البحر الأحمر</div>
+        <div class="uni-name-en">Red Sea University</div>
+        <div class="college-name">كلية العلوم التطبيقية</div>
+        <div class="college-name-en">Faculty of Applied Sciences</div>
+        <h1 style="font-size: 1.5rem;">مبادرة تأهيل مختبر الأبحاث</h1>
     </header>
 
     <div class="container">
-        
         <div class="card announcement">
             <h2 class="card-title" style="color: var(--accent-color);"><i class="fas fa-bullhorn"></i> إعلان تشكيل المكتب التنفيذي</h2>
             <p>تم بحمد الله اختيار رؤساء لجان المكتب التنفيذي للمبادرة:</p>
@@ -71,7 +81,8 @@
     </div>
 
     <footer>
-        <p>جميع الحقوق محفوظة © مبادرة مختبر الأبحاث 2026 | تصميم: max</p>
+        <p>جميع الحقوق محفوظة © كلية العلوم التطبيقية - جامعة البحر الأحمر 2026</p>
+        <p style="font-size: 0.7rem; margin-top: 5px;">تصميم: max</p>
     </footer>
 
 </body>
