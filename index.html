@@ -2,17 +2,235 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>الدستور واللائحة الداخلية الكاملة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدستور الفخم لمبادرة تأهيل مركز الأبحاث</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        body { font-family: 'Cairo', sans-serif; background-color: #f4f4f4; padding: 20px; line-height: 1.8; color: #333; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .header { text-align: center; border-bottom: 3px solid #003366; margin-bottom: 40px; padding-bottom: 20px; }
-        .logos { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
-        /* تصحيح لتظهر الصور بشكل دائري واحترافي */
-        .logos img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 3px solid #003366; padding: 5px; background: white; }
-        .chapter-title { background: #003366; color: white; padding: 15px; border-radius: 8px; margin: 30px 0 20px 0; text-align: center; font-weight: bold; }
-        .madda-card { background: #fff; border: 1px solid #ddd; border-right: 6px solid #003366; margin-bottom: 15px; padding: 15px; border-radius: 8px; }
-        .madda-title { font-weight: bold; color: #003366; display: block; margin-bottom: 5px; }
+        /* تعريف الألوان الملكية المتناسقة */
+        :root {
+            --primary-color: #002244; /* كحلي ملكي غامق جداً */
+            --accent-color: #C19A6B; /* ذهبي عتيق فخم */
+            --text-color: #333;
+            --bg-color: #f0f2f5; /* رمادي فاتح مائل للأزرق */
+        }
+
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background-color: var(--bg-color); 
+            margin: 0;
+            padding: 40px 20px; 
+            line-height: 1.8; 
+            color: var(--text-color); 
+        }
+
+        .container { 
+            max-width: 1000px; 
+            margin: auto; 
+            background: white; 
+            padding: 60px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08); /* ظل ناعم وفخم */
+            position: relative;
+        }
+
+        /* إضافة زخرفة خلفية فخمة */
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
+            border: 2px solid rgba(193, 154, 107, 0.1); /* إطار ذهبي شفاف */
+            border-radius: 15px;
+            pointer-events: none;
+        }
+
+        .header { 
+            text-align: center; 
+            border-bottom: 3px solid var(--accent-color); /* خط ذهبي فاصل */
+            margin-bottom: 60px; 
+            padding-bottom: 40px; 
+            position: relative;
+        }
+
+        /* إضافة أيقونة فخمة في الترويسة */
+        .header::before {
+            content: "\f518"; /* أيقونة كتاب مفتوح من FontAwesome */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 30px;
+            color: var(--accent-color);
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 15px;
+        }
+
+        .logos { 
+            display: flex; 
+            justify-content: center; 
+            gap: 25px; 
+            margin-bottom: 30px; 
+            flex-wrap: wrap; 
+        }
+
+        /* تنسيق فخم للشعارات الدائرية */
+        .logos img { 
+            width: 130px; 
+            height: 130px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            border: 4px solid var(--primary-color); /* إطار كحلي */
+            padding: 5px; 
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .logos img:hover {
+            transform: scale(1.05) translateY(-5px); /* تأثير تفاعلي راقٍ عند التمرير */
+        }
+
+        .header h1 { 
+            font-family: 'Amiri', serif; /* خط أميري تقليدي للعناوين الكبيرة */
+            color: var(--primary-color); 
+            font-size: 3em; 
+            margin: 10px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .header h2 { 
+            color: var(--primary-color); 
+            font-size: 1.8em; 
+            font-weight: normal;
+            margin: 5px 0 20px 0;
+        }
+
+        .header h3 { 
+            font-family: 'Cairo', sans-serif; 
+            color: var(--text-color); 
+            background: rgba(193, 154, 107, 0.1); /* خلفية ذهبية شفافة */
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 1.2em; 
+        }
+
+        .chapter-title { 
+            background-color: var(--primary-color); 
+            color: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin: 40px 0 30px 0; 
+            text-align: center; 
+            font-weight: bold; 
+            font-size: 1.3em;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* إضافة زخرفة عربية صغيرة على جانبي عنوان الفصل */
+        .chapter-title::before, .chapter-title::after {
+            content: "✨";
+            color: var(--accent-color);
+            margin: 0 15px;
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* صف واحد كما في الكود الأصلي */
+            gap: 20px;
+        }
+
+        /* تنسيق بطاقات المواد كأنها أوراق بردي فاخرة */
+        .madda-card { 
+            background-color: white; 
+            border: 1px solid #eaeaea; 
+            border-right: 8px solid var(--accent-color); /* إطار ذهبي عريض على اليمين وفخم */
+            margin-bottom: 20px; 
+            padding: 25px; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02); 
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .madda-card:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* تأثير عمق عند التمرير */
+            transform: translateX(-5px); /* حركة بسيطة وفخمة لليمين */
+        }
+
+        /* إضافة زخرفة مائية خلفية لكل بطاقة */
+        .madda-card::after {
+            content: "\f19d"; /* أيقونة قبعة تخرج شفافة */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            font-size: 40px;
+            color: rgba(0, 34, 68, 0.03); /* كحلي شفاف جداً */
+            pointer-events: none;
+        }
+
+        .madda-title { 
+            font-weight: bold; 
+            color: var(--primary-color); 
+            display: block; 
+            margin-bottom: 10px; 
+            font-size: 1.2em; 
+            border-bottom: 2px solid #eaeaea; 
+            padding-bottom: 8px; 
+            position: relative;
+        }
+
+        /* إضافة أيقونة صغيرة بجوار عنوان المادة */
+        .madda-title::before {
+            content: "\f02d"; /* أيقونة كتاب مغلق */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--accent-color);
+            margin-left: 10px;
+        }
+
+        .footer {
+            margin-top: 80px; 
+            text-align: center; 
+            color: var(--text-color);
+            background: var(--primary-color);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            font-size: 1em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        /* أيقونات تواصل اجتماعي فخمة */
+        .social-icons {
+            margin-top: 15px;
+            font-size: 1.5em;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
     </style>
 </head>
 <body>
@@ -24,58 +242,73 @@
             <img src="IMG-20260520-WA0021.jpg" alt="كلية العلوم التطبيقية">
             <img src="IMG-20260520-WA0022.jpg" alt="مبادرة تأهيل مركز الأبحاث">
         </div>
-        <h1>جامعة البحر الأحمر - كلية العلوم التطبيقية</h1>
-        <h3>  تأهيل مركز الأبحاث</h3>
+        <h1>جامعة البحر الأحمر</h1>
+        <h2>كلية العلوم التطبيقية</h2>
+        <h3>الدستور الشامل واللائحة الداخلية لمبادرة تأهيل مركز الأبحاث</h3>
     </div>
 
     <div class="chapter-title">الفصل الأول إلى العاشر</div>
     
-    <script>
-        const allMaterials = [
-            "المادة (1): تُسمى المبادرة 'مبادرة تأهيل مركز الأبحاث بكلية العلوم التطبيقية – جامعة البحر الأحمر'.",
-            "المادة (2): شعار المبادرة: 'معاً لرفع كفاءة البحث العلمي'.",
-            "المادة (3): المبادرة كيان أكاديمي تطوعي غير ربحي يعمل وفق لوائح الجامعة.",
-            "المادة (4): تخضع المبادرة لإشراف عميد الكلية والمشرف الأكاديمي.",
-            "المادة (5): تشمل المبادرة أقسام الكيمياء، المختبرات، الفيزياء الطبية، الإلكترونية، الرياضيات، والبيئة.",
-            "المادة (6): الرؤية هي بناء بيئة بحثية تواكب المعايير العالمية.",
-            "المادة (7): الرسالة هي تسخير الجهود الطلابية لتطوير المعامل.",
-            "المادة (8): الأهداف: تطوير البنية التحتية، التدريب، والشراكات العلمية.",
-            "المادة (9): العضوية متاحة لجميع طلاب وخريجي الكلية.",
-            "المادة (10): الحقوق: المشاركة في الأنشطة والترشح للانتخابات.",
-            "المادة (11): الواجبات: احترام لوائح الجامعة والمحافظة على الممتلكات.",
-            "المادة (12): تُسحب العضوية في حال الإضرار بسمعة المبادرة.",
-            "المادة (13): الجمعية العمومية هي السلطة العليا وتضم جميع الأعضاء.",
-            "المادة (14): تختص الجمعية بانتخاب المكتب التنفيذي وإجازة الخطط.",
-            "المادة (15): المجلس الاستشاري: العميد، المشرف الأكاديمي، و3 خريجين.",
-            "المادة (16): يتولى المجلس التوجيه العام والفصل في النزاعات.",
-            "المادة (17): المكتب التنفيذي هو الجهة الإدارية المنفذة.",
-            "المادة (18): يتكون المكتب من الرئيس، نائبه، المقرر، واللجان.",
-            "المادة (19): ضرورة تمثيل جميع الأقسام في المكتب التنفيذي.",
-            "المادة (20): تُشكل لجنة فرعية لكل قسم تتبع المكتب التنفيذي.",
-            "المادة (21): اللجان الفرعية تحصر الاحتياجات وترفع التقارير.",
-            "المادة (22): مدة الدورة (12) شهراً ولا تزيد عن دورتين للرئيس.",
-            "المادة (23): تُنتخب القيادة بالاقتراع المباشر من الجمعية.",
-            "المادة (24): تعين لجنة مستقلة للإشراف على الانتخابات.",
-            "المادة (25): يتم التسليم والتسلم للأرشيف والعهد خلال أسبوعين.",
-            "المادة (26): تعتمد المبادرة على الرعايات والشراكات العلمية.",
-            "المادة (27): تخضع المصروفات للرقابة المالية مع الكلية.",
-            "المادة (28): تلتزم المبادرة بالشفافية المالية ونشر التقارير.",
-            "المادة (29): يجب توثيق كافة الإنجازات في أرشيف ورقي ورقمي.",
-            "المادة (30): تحفظ نسخة من الأرشيف لدى إدارة الكلية.",
-            "المادة (31): تُسلم العهد والحسابات للمكتب الجديد عند انتهاء الدورة.",
-            "المادة (32): للمجلس الاستشاري تجميد العضوية في حال المخالفات.",
-            "المادة (33): يحق للجمعية سحب الثقة من أي عضو تنفيذي.",
-            "المادة (34): تسعى المبادرة لإدخال الذكاء الاصطناعي في المعامل.",
-            "المادة (35): لا يُعدل الدستور إلا بموافقة ثلثي الأعضاء والعميد.",
-            "المادة (36): يصبح الدستور نافذاً من تاريخ توقيعه من العميد."
-        ];
+    <div class="materials-grid">
+        <script>
+            const allMaterials = [
+                "المادة (1): تُسمى المبادرة 'مبادرة تأهيل مركز الأبحاث بكلية العلوم التطبيقية – جامعة البحر الأحمر'.",
+                "المادة (2): شعار المبادرة: 'معاً لرفع كفاءة البحث العلمي'.",
+                "المادة (3): المبادرة كيان أكاديمي تطوعي غير ربحي يعمل وفق لوائح الجامعة.",
+                "المادة (4): تخضع المبادرة لإشراف عميد الكلية والمشرف الأكاديمي.",
+                "المادة (5): تشمل المبادرة أقسام الكيمياء، المختبرات، الفيزياء الطبية، الإلكترونية، الرياضيات، والبيئة.",
+                "المادة (6): الرؤية هي بناء بيئة بحثية تواكب المعايير العالمية.",
+                "المادة (7): الرسالة هي تسخير الجهود الطلابية لتطوير المعامل.",
+                "المادة (8): الأهداف: تطوير البنية التحتية، التدريب، والشراكات العلمية.",
+                "المادة (9): العضوية متاحة لجميع طلاب وخريجي الكلية.",
+                "المادة (10): الحقوق: المشاركة في الأنشطة والترشح للانتخابات.",
+                "المادة (11): الواجبات: احترام لوائح الجامعة والمحافظة على الممتلكات.",
+                "المادة (12): تُسحب العضوية في حال الإضرار بسمعة المبادرة.",
+                "المادة (13): الجمعية العمومية هي السلطة العليا وتضم جميع الأعضاء.",
+                "المادة (14): تختص الجمعية بانتخاب المكتب التنفيذي وإجازة الخطط.",
+                "المادة (15): المجلس الاستشاري: العميد، المشرف الأكاديمي، و3 خريجين.",
+                "المادة (16): يتولى المجلس التوجيه العام والفصل في النزاعات.",
+                "المادة (17): المكتب التنفيذي هو الجهة الإدارية المنفذة.",
+                "المادة (18): يتكون المكتب من الرئيس، نائبه، المقرر، واللجان.",
+                "المادة (19): ضرورة تمثيل جميع الأقسام في المكتب التنفيذي.",
+                "المادة (20): تُشكل لجنة فرعية لكل قسم تتبع المكتب التنفيذي.",
+                "المادة (21): اللجان الفرعية تحصر الاحتياجات وترفع التقارير.",
+                "المادة (22): مدة الدورة (12) شهراً ولا تزيد عن دورتين للرئيس.",
+                "المادة (23): تُنتخب القيادة بالاقتراع المباشر من الجمعية.",
+                "المادة (24): تعين لجنة مستقلة للإشراف على الانتخابات.",
+                "المادة (25): يتم التسليم والتسلم للأرشيف والعهد خلال أسبوعين.",
+                "المادة (26): تعتمد المبادرة على الرعايات والشراكات العلمية.",
+                "المادة (27): تخضع المصروفات للرقابة المالية مع الكلية.",
+                "المادة (28): تلتزم المبادرة بالشفافية المالية ونشر التقارير.",
+                "المادة (29): يجب توثيق كافة الإنجازات في أرشيف ورقي ورقمي.",
+                "المادة (30): تحفظ نسخة من الأرشيف لدى إدارة الكلية.",
+                "المادة (31): تُسلم العهد والحسابات للمكتب الجديد عند انتهاء الدورة.",
+                "المادة (32): للمجلس الاستشاري تجميد العضوية في حال المخالفات.",
+                "المادة (33): يحق للجمعية سحب الثقة من أي عضو تنفيذي.",
+                "المادة (34): تسعى المبادرة لإدخال الذكاء الاصطناعي في المعامل.",
+                "المادة (35): لا يُعدل الدستور إلا بموافقة ثلثي الأعضاء والعميد.",
+                "المادة (36): يصبح الدستور نافذاً من تاريخ توقيعه من العميد."
+            ];
 
-        allMaterials.forEach(item => {
-            let parts = item.split(':');
-            document.write(`<div class="madda-card"><span class="madda-title">${parts[0]}</span>${parts[1]}</div>`);
-        });
-    </script>
+            allMaterials.forEach(item => {
+                let parts = item.split(':');
+                document.write(`<div class="madda-card"><span class="madda-title">${parts[0]}</span>${parts[1]}</div>`);
+            });
+        </script>
+    </div>
+
+    <div class="footer">
+        <p><i class="fas fa-university"></i> جامعة البحر الأحمر - كلية العلوم التطبيقية</p>
+        <p><i class="fas fa-microscope"></i> مبادرة تأهيل مركز الأبحاث © 2026</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+        </div>
+    </div>
 </div>
 
 </body>
 </html>
+
