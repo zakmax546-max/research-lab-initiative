@@ -1,12 +1,102 @@
-        <!-- قسم أهداف المبادرة الجديد -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مبادرة تأهيل مختبر الأبحاث | جامعة البحر الأحمر</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root { --primary-color: #003366; --secondary-color: #11caa0; --accent-color: #ff9900; --light-color: #f4f6f9; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Cairo', sans-serif; background-color: var(--light-color); color: #333; line-height: 1.8; padding-bottom: 150px; }
+        
+        header { background: linear-gradient(135deg, #002244 0%, #004488 100%); color: white; padding: 30px 20px; text-align: center; border-bottom: 5px solid var(--secondary-color); }
+        .logo-img { max-width: 140px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 15px; }
+        .uni-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 5px; }
+        .uni-name-en { font-size: 0.9rem; opacity: 0.8; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        .college-name { font-size: 1.1rem; color: var(--secondary-color); font-weight: 600; margin-bottom: 5px; }
+        .college-name-en { font-size: 0.85rem; opacity: 0.7; margin-bottom: 20px; text-transform: uppercase; }
+        
+        .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        .card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-right: 5px solid var(--primary-color); }
+        .card-title { color: var(--primary-color); font-size: 1.3rem; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        .member-badge { display: inline-block; background-color: #e6f0fa; color: var(--primary-color); padding: 5px 15px; border-radius: 20px; margin: 5px; font-weight: 600; font-size: 0.9rem; }
+        .news-item { border-bottom: 1px solid #eee; padding: 10px 0; font-size: 0.95rem; }
+        .announcement { border-right: 5px solid var(--accent-color) !important; }
+        
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
+        .btn-contact { text-decoration: none; padding: 10px; border-radius: 8px; text-align: center; color: white; font-weight: bold; }
+        .whatsapp { background-color: #25d366; } .telegram { background-color: #0088cc; } .youtube { background-color: #ff0000; } .email { background-color: #d44638; }
+        
+        footer { background-color: #001122; color: #ccc; text-align: center; padding: 20px; position: fixed; bottom: 0; width: 100%; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="IMG-20260519-WA0028.jpg" alt="الشعار" class="logo-img">
+        <div class="uni-name">جامعة البحر الأحمر</div>
+        <div class="uni-name-en">Red Sea University</div>
+        <div class="college-name">كلية العلوم التطبيقية</div>
+        <div class="college-name-en">Faculty of Applied Sciences</div>
+        <h1 style="font-size: 1.5rem;">مبادرة تأهيل مختبر الأبحاث</h1>
+    </header>
+
+    <div class="container">
+
         <div class="card">
             <h2 class="card-title"><i class="fas fa-bullseye"></i> أهداف المبادرة</h2>
             <ul style="padding-right: 20px;">
-                <li style="margin-bottom: 10px;"><strong>تأهيل البنية التحتية:</strong> صيانة وتحديث الأجهزة والمعدات المعملية لضمان بيئة بحثية متطورة.</li>
-                <li style="margin-bottom: 10px;"><strong>دعم البحث العلمي:</strong> توفير الأدوات والموارد اللازمة للباحثين والطلاب لإجراء تجاربهم بدقة وكفاءة.</li>
-                <li style="margin-bottom: 10px;"><strong>تعزيز الشراكات:</strong> بناء جسور تعاون مع الجهات ذات الصلة لتطوير المختبرات وتوفير المستهلكات.</li>
-                <li style="margin-bottom: 10px;"><strong>نشر المعرفة:</strong> تنظيم ورش عمل ودورات تدريبية حول الاستخدام الأمثل للأجهزة والمعدات البحثية.</li>
-                <li><strong>الاستدامة:</strong> وضع خطط طويلة الأمد للحفاظ على كفاءة المختبرات وتطويرها بشكل مستمر.</li>
+                <li class="news-item">توفير بيئة بحثية ملائمة للطلاب والباحثين.</li>
+                <li class="news-item">صيانة وتطوير الأجهزة والمعدات المخبرية.</li>
+                <li class="news-item">تعزيز التعاون بين الأقسام العلمية المختلفة.</li>
+                <li class="news-item">رفع كفاءة الأداء العملي في الكلية.</li>
             </ul>
         </div>
+
+        <div class="card announcement">
+            <h2 class="card-title" style="color: var(--accent-color);"><i class="fas fa-bullhorn"></i> إعلان تشكيل المكتب التنفيذي</h2>
+            <p>تم بحمد الله اختيار رؤساء لجان المكتب التنفيذي للمبادرة:</p>
+            <div class="news-item"><b>رئيس المبادرة:</b> أسامة مصطفى (معامل كيميائية)</div>
+            <div class="news-item"><b>نائب الرئيس:</b> عبدالله (كيمياء تطبيقية)</div>
+            <div class="news-item"><b>المقرر العام:</b> رحيق عبد الباسط (مختبرات كيميائية)</div>
+            <div class="news-item"><b>اللجنة الإعلامية:</b> سعيد (مختبرات كيميائية)</div>
+            <div class="news-item"><b>اللجنة المالية:</b> هبة أحمد (بيئة وموارد)</div>
+            <div class="news-item"><b>العلاقات الخارجية:</b> ريم زهير (معامل كيميائية)</div>
+            <div class="news-item"><b>اللجنة الفنية:</b> أبوبكر (فيزياء إلكترونية)</div>
+            <p style="margin-top: 15px; color: var(--primary-color); font-weight: bold;">🗓️ أول اجتماع: الثلاثاء 19 مايو 2026، الساعة 2 ظهراً.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title"><i class="fas fa-users"></i> أعضاء المكتب الإعلامي</h2>
+            <span class="member-badge">سعيد عبدالله سعيد</span>
+            <span class="member-badge">عبد القادر عبد المنعم</span>
+            <span class="member-badge">محمد ابوبكر</span>
+            <span class="member-badge">سبأ صلاح مكي</span>
+            <span class="member-badge">منيه موسى محمد</span>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title"><i class="fas fa-headset"></i> تواصل معنا</h2>
+            <div class="contact-grid">
+                <a href="https://wa.me/249906131492" class="btn-contact whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+                <a href="https://t.me/abdulqader76" class="btn-contact telegram"><i class="fab fa-telegram"></i> تلجرام</a>
+                <a href="https://youtube.com/@maxmxa-j5e" class="btn-contact youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
+                <a href="mailto:12faslri.12@gmail.com" class="btn-contact email"><i class="fas fa-envelope"></i> البريد</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © كلية العلوم التطبيقية - جامعة البحر الأحمر 2026</p>
+        <p style="font-size: 0.7rem; margin-top: 5px;">تصميم: max</p>
+    </footer>
+
+</body>
+</html>
+
 
